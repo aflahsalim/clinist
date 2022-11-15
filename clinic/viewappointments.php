@@ -18,23 +18,28 @@
 include('session.php');
 include 'connection.php';
 $id = $_SESSION['id'];
-$sql = "SELECT * FROM appointment ";
+$sql = "SELECT * FROM appointment where clinic=$id";
 $result = $con->query($sql);
 echo"
 <table>
 <thead>
-<th>clinic</th>
-<th>date</th>
-<th>slot</th>
+<th>Clinic</th>
+<th>Patient</th>
+<th>Date</th>
+<th>Slot</th>
 </thead>";
 
 while ($row = $result->fetch_assoc()) {
+    $userid= $row['userid'];
+    $usersql = "SELECT * FROM users where id='$userid' ";
+$userresult = $con->query($usersql);
+$name = $userresult->fetch_array()['name'];
 echo "<tbody>
 <tr>
 <td>" . $row['clinic'] . "</td>
+<td>" . $name . "</td>
 <td>" . $row['date'] . "</td>
 <td>" . $row['slot'] . "</td>
-<td>" . $row['id'] . "</td>
 </tr>
 <tbody>";
 }

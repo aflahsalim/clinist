@@ -7,6 +7,7 @@ $result = $con->query($sql);
 echo"
 <table>
 <thead>
+<th>user id</th>
 <th>name</th>
 <th>gender</th>
 <th>dob</th>
@@ -17,6 +18,7 @@ echo"
 while ($row = $result->fetch_assoc()) {
 echo "<tbody>
 <tr>
+<td>" . $row['id'] . "</td>
 <td>" . $row['name'] . "</td>
 <td>" . $row['gender'] . "</td>
 <td>" . $row['dob'] . "</td>

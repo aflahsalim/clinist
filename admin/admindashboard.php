@@ -36,6 +36,12 @@ include('session.php');
               </a>
             </li>
             <li class="list">
+              <a href="viewappointment.php" class="nav-link">
+                <i class="uil uil-clinic-medical"></i>
+                <span class="link">Appointments</span>
+              </a>
+            </li>
+            <li class="list">
               <a href="logout.php" class="nav-link">
                 <i class="uil uil-signout"></i>
                 <span class="link">Logout</span>

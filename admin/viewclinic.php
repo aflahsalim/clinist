@@ -7,6 +7,7 @@ $result = $con->query($sql);
 echo"
 <table>
 <thead>
+<th>clinic id</th>
 <th>name</th>
 <th>location</th>
 <th>number</th>
@@ -15,6 +16,7 @@ echo"
 while ($row = $result->fetch_assoc()) {
 echo "<tbody>
 <tr>
+<td>" . $row['id'] . "</td>
 <td>" . $row['name'] . "</td>
 <td>" . $row['location'] . "</td>
 <td>" . $row['number'] . "</td>
