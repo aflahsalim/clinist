@@ -34,7 +34,7 @@ $result = mysqli_query($con,$sql);
   			<option value="1pm to 3pm">1pm to 3pm</option>  
   			<option value="3pm to 5pm">3pm to 5pm</option>
 			</select><br><br><br>
-			<input type="submit" name="sbtBtn" placeholder="name"><br>
+			<input type="submit" value="proceed to payment"name="sbtBtn" placeholder="name"><br>
 		</form>
    	</div>
 </head>
@@ -47,9 +47,9 @@ $clinic = $_POST['clinic'];
 $userid =$_SESSION['id'];
 $date = $_POST['date'];
 $slot = $_POST['slot'];
-$insQuery = mysqli_query($con, "INSERT INTO appointment VALUES('','$clinic','$userid','$date','$slot')");
+$insQuery = mysqli_query($con, "INSERT INTO appointment (clinic,userid,date,slot) VALUES('$clinic','$userid','$date','$slot')");
 if($insQuery){
-echo "Booked Successfully";
+  include header("location: payment.php");
 }
 else {
 echo "Error. Please try again";
