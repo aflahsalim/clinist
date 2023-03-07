@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 14, 2022 at 04:41 PM
+-- Generation Time: Nov 24, 2022 at 10:38 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -49,20 +49,12 @@ INSERT INTO `admin` (`id`, `name`, `email`, `password`) VALUES
 
 CREATE TABLE `appointment` (
   `id` int(100) NOT NULL,
-  `clinic` int(50) NOT NULL,
+  `clinic` varchar(50) NOT NULL,
   `userid` int(30) NOT NULL,
-  `date` date NOT NULL,
-  `slot` varchar(20) NOT NULL
+  `date` varchar(50) NOT NULL,
+  `slot` varchar(20) NOT NULL,
+  `payment` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `appointment`
---
-
-INSERT INTO `appointment` (`id`, `clinic`, `userid`, `date`, `slot`) VALUES
-(5, 0, 2022, '0000-00-00', '7'),
-(6, 0, 2022, '0000-00-00', '7'),
-(7, 0, 2022, '0000-00-00', '7');
 
 -- --------------------------------------------------------
 
@@ -84,7 +76,9 @@ CREATE TABLE `clinic` (
 --
 
 INSERT INTO `clinic` (`id`, `name`, `email`, `password`, `location`, `number`) VALUES
-(11, 'rajeevs', 'rajeevs@gmail.com', 'rajeev123', 'edappally', 1234567890);
+(1, 'Aster Labs', 'asterlab@gmail.com', 'asterlab123', 'Edappally', 2147483647),
+(2, 'Oliva', 'olivia@gmail.com', 'olivia123', 'Kadavanthra', 2147483647),
+(3, 'Regencare', 'regencare@gmail.com', 'regencare123', 'Vennala', 2147483647);
 
 -- --------------------------------------------------------
 
@@ -97,7 +91,7 @@ CREATE TABLE `users` (
   `name` varchar(30) NOT NULL,
   `email` varchar(50) NOT NULL,
   `password` varchar(100) NOT NULL,
-  `gender` varchar(1) NOT NULL,
+  `gender` varchar(10) NOT NULL,
   `dob` date NOT NULL,
   `address` varchar(200) NOT NULL,
   `number` bigint(10) NOT NULL
@@ -108,9 +102,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `gender`, `dob`, `address`, `number`) VALUES
-(7, 'Adil', 'adil@gmail.com', '1234', '', '2022-11-01', 'edappally', 99999999),
-(8, 'fahis', 'fahis@gmail.com', 'fahis123', '', '2022-01-19', 'tirur', 99999999),
-(10, 'aldheen', 'don@gmail.com', '123', '', '2022-02-02', 'fort kochi', 123432152);
+(1, 'Aflah', 'aflah@gmail.com', 'aflah123', '', '0000-00-00', '', 0),
+(2, 'Jasim', 'jasim@gmail.com', 'jasim123', '', '0000-00-00', 'Karukappilly', 9895437014);
 
 --
 -- Indexes for dumped tables
@@ -154,19 +147,19 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `appointment`
 --
 ALTER TABLE `appointment`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `clinic`
 --
 ALTER TABLE `clinic`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

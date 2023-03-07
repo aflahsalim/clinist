@@ -6,25 +6,37 @@ include('connection.php');
 
 <html>
 <head>  
-	<link rel="stylesheet" href="login.css">
-	<div class="">
-		<head>
-		<form class="login-card" method="post">
+<link rel="stylesheet" href="../css/login.css">
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>Login</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+  <div id="card">
+    <div id="card-content">
+      <div id="card-title">
+        <h2>LOGIN</h2>
+        <div class="underline-title"></div>
+      </div>
+      <form method="post" class="form">
+        <input id="user-email" class="form-content" placeholder="Email" type="email" name="email" autocomplete="on" required />
+        <div class="form-border"></div><br><br>
+        <input id="user-password" class="form-content" placeholder="Password" type="password" name="password" required />
+        <div class="form-border"></div>
+        <input id="submit-btn" type="submit" name="submit" value="LOGIN" />
+      </form>
+    </div>
+  </div>
+</body>
 
-			<h1>welcome admin </h1>
-			EMAIL : <input type="email" name="email" placeholder="Email"/><br><br>
-			PASSWORD : <input type="password" name="password" placeholder="Password"/><br><br>
-			<input type="submit" name="sbtBtn" placeholder="name"><br>
-
-		</form>
-   	</div>
 </head>
 </html>
 
 
 
 <?php
-if(isset($_POST['sbtBtn'])){
+if(isset($_POST['submit'])){
 $email = $_POST['email'];  
 $password = $_POST['password'];    
       
@@ -35,10 +47,21 @@ $count = mysqli_num_rows($result);
    
 if($count == 1){  
 	$_SESSION['id']= $row['id'];
-	header("location: admindashboard.php");
+	header("location: adduser.php");
 }  
 else{  
     echo "<h1> Login failed. Invalid email or password.</h1>";  
 }  	
 }   
 ?>                    
+
+
+<script type="text/javascript">
+function clicked() {
+    alert('clicked');
+}
+
+
+
+
+

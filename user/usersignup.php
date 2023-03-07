@@ -2,37 +2,49 @@
 include('connection.php');
 ?>
 
-
+<!DOCTYPE html>
 <html>
-<head>  
-	<link rel="stylesheet" href="">
-	<div class="">
-		<head>
-		<form action="" method="post">
 
-			<h1>Signup to Clinist </h1>
-			NAME : <input type="text" name="name" placeholder="Name"/><br><br>
-			EMAIL : <input type="email" name="email" placeholder="Email"/><br><br>
-			PASSWORD : <input type="password" name="password" placeholder="Password"/><br><br>
-			<input type="submit" name="sbtBtn" placeholder="name"><br>
+<head>
+<link rel="stylesheet" href="../css/signup.css">
 
-		</form>
-   	</div>
-	Already a user? <a href="userlogin.php">Login Here</a>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Signup</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
-</html>
+
+<body>
+  <div id="card">
+    <div id="card-content">
+      <div id="card-title">
+        <h2>SIGNUP</h2>
+        <div class="underline-title"></div>
+      </div>
+      <form method="post" class="form">
+	  <input id="user-name" class="form-content" placeholder="Name" type="name" name="name" autocomplete="on" required />
+        <div class="form-border"></div><br><br>
+        <input id="user-email" class="form-content" placeholder="Email" type="email" name="email" autocomplete="on" required />
+        <div class="form-border"></div><br><br>
+        <input id="user-password" class="form-content" placeholder="Password" type="password" name="password" required />
+        <div class="form-border"></div>
+        <input id="submit-btn" type="submit" name="submit" value="SIGNUP" />
+        <a href="userlogin.php" id="signup">Already have an account?</a>
+      </form>
+    </div>
+  </div>
+</body>
 
 
 
 <?php
-if(isset($_POST['sbtBtn'])) {
+if(isset($_POST['submit'])) {
 $name = $_POST['name'];
 $email = $_POST['email'];
 $password = $_POST['password'];
 $insQuery = mysqli_query($con, "INSERT INTO users(name,email,password) VALUES('$name','$email','$password')");
 if($insQuery){
-echo "Signup Successfull";
-echo '<a href="userlogin.php">Login Here</a>';
+header('location:userlogin.php');
 }
 else {
 echo "Error. Please try again";

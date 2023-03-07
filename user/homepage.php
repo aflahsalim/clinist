@@ -38,7 +38,7 @@
         <div class="text-box">
             <h1>Kochi's First Online Clinical Service</h1>
             <p> </p>
-            <a href="" class="hero-btn">Visit Us To know More</a>
+            <a href="#dummy4" class="hero-btn">Visit Us To know More</a>
         </div>
     </section> 
 </section>
@@ -75,11 +75,11 @@
             </div>
             <div class="about-col">
                 <h3>Consultation Facility</h3>
-                <p>Clinist helps us to consult a doctor both online and offline for their advice</p>
+                <p>Clinist helps us to consult a doctor both online and offline for their advice (Coming Soon!!)</p>
             </div>
             <div class="about-col">
                 <h3>Medicine Billing</h3>
-                <p>Clinist helps us to purchase the priscribed medicine from the doctor online and can also opt for a contact less delivery</p>
+                <p>Clinist helps us to purchase the priscribed medicine from the clinics and can opt for delivery (Coming Soon!!)</p>
             </div>
 
         </div>
@@ -111,20 +111,21 @@
 
     <div class="row">
         <div class="clinics-col">
-           <h3>Clinic 1</h3>
-            <p>Clinist helps us to book an appointment with your desired doctors from the clinics all around kochi</p>
+           <h3>Aster Labs</h3>
+            <p>Aster Medcity is a quaternary care healthcare Laboratary in Edappally and one of the largest in South India. It is the flagship Laboratary of Aster DM Healthcare.</p>
         </div>
+       
+        <div class="clinics-col">
+           <h3>Oliva</h3>
+            <p>Oliva Clinic is the leading name for specialised dermatology related services in Kadavanthra. Our clinical expertise offers world-class aesthetic solutions</p>
+        </div> 
 
-    <div class="clinics-col">
-        <h3>Clinic 2</h3>
-        <p>Clinist helps us to consult a doctor both online and offline for their advice</p>
-    </div>
+        <div class="clinics-col">
+           <h3>Regencare</h3>
+            <p>Regencare is a state-of-the-art boutique health centre for regenerative therapy, sports medicine and rehabilitation located at Vennala.</p>
+        </div>
             
-    <div class="clinics-col">
-        <h3>Clinic 3</h3>
-        <p>Clinist helps us to purchase the priscribed medicine from the doctor online and can also opt for a contact less delivery</p>
-    </div> 
-
+    
 </section>
 
 
@@ -152,8 +153,14 @@
 <section class="accounts">
 
     <h1>Login into Clinist to book an Appointment.<br>New here? Signup now.</h1>
-    <a href="usersignup.php" class="hero-btn">ACCOUNTS</a>
-
+    <div class="dropdown">
+  <button class="dropbtn">Sign-In</button>
+  <div class="dropdown-content">
+    <a href="userlogin.php">User</a>
+    <a href="../clinic/cliniclogin.php">Clinic</a>
+    <a href="../admin/adminlogin.php">Admin</a>
+  </div>
+  </div>
 </section>
 
 
@@ -180,7 +187,7 @@
 <section class="footer">
 
         <h4>About Us</h4>
-        <p> about clinist <br> gmail,instagram,gmail,no and stuff</p>
+        <p> Contact us on <br> Email: clinist@gmail&emsp;&emsp;No: 8089089869/9895437014&emsp;&emsp;Address: Edappally</p>
     
     </section>
 </section>

@@ -8,8 +8,4 @@ if(mysqli_connect_errno())
 {
 echo "<div style='color:#fff;'>not connected</div>";
 }
-else
-{
-echo "<div style='color:#fff;'>connected</div>";
-}
 ?>

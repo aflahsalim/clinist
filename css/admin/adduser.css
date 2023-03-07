@@ -1,0 +1,179 @@
+*{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+  body{
+        min-height: 100vh;
+        width: 100%;
+        background-image: linear-gradient(#000428, #004e92);        
+        background-position: center;
+        background-size: cover; 
+        position: relative;
+  }
+  nav{
+        z-index: 20;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        display: flex;
+        background-color: #000;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        width: 83%;
+        height: 100px;
+        margin-top: 70px;
+        margin-left: 120px;
+        margin-right: 33px; 
+        background: rgba( 0, 0, 0, 0.35 );
+        box-shadow: 0 8px 32px 0 rgba(49, 50, 68, 0.37);
+        backdrop-filter: blur( 7px );
+        -webkit-backdrop-filter: blur( 7px );
+}
+  nav .logo{
+      display: flex;
+      align-items: center;
+      margin: 0 28px;
+  }
+  .logo img {
+      width: 110px;
+      margin: 10px 9px 9px 25px;;
+  }
+  .sidebar {
+      border-bottom-left-radius:20px;
+      border-bottom-right-radius: 20px;
+      position: fixed;
+      bottom: 70px;
+      left: 120px;
+      margin-top: 220px;
+      height: 64%;
+      width: 240px;
+      padding: 20px 0;
+      background: rgba( 0, 0, 0, 0.35 );
+      box-shadow: 0 8px 32px 0 rgba(49, 50, 68, 0.37);
+      backdrop-filter: blur( 7px );
+      -webkit-backdrop-filter: blur( 7px );
+}
+  .sidebar .sidebar-content {
+      display: flex;
+      height: 100%;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 0px 28px ;
+    }
+    i{
+      padding: 10px;
+      color: #fff;
+    }
+    .list .nav-link {
+      display: flex;
+      align-items: center;
+      margin: 8px 11px;
+      padding: 6px 0px;
+      border-radius: 8px;
+      text-decoration: none;
+    }
+    .lists{
+  list-style-type: none;
+    }
+    .lists .nav-link:hover {
+      background-color: #9627d6;
+      border-radius: 10px 10px;
+    }
+    .nav-link .icon {
+      margin-right: 14px;
+      font-size: 17px;
+      color: #fff;
+    }
+    .nav-link .link {
+      font-size: 16px;
+      color: #fff;
+      font-weight: 400;
+    }
+    .lists .nav-link:hover .icon,
+    .lists .nav-link:hover .link {
+      color: #fff;
+    }
+  .main{
+    position: absolute;
+    border-radius: 25px;
+    top: 193px;
+    left: 380px;
+    width: 66%;
+    height: 64%;
+    background: rgba( 0, 0, 0, 0.35 );
+    box-shadow: 0 8px 32px 0 rgba(49, 50, 68, 0.37);
+    backdrop-filter: blur( 7px );
+    -webkit-backdrop-filter: blur( 7px );
+    }
+
+.card{
+  color: #fff;
+  font-size: 10px;
+  border-radius: 25px;
+  padding: 40px 50px 0px;
+}
+a{
+  color: #ffffff;
+  text-decoration: none;
+}
+a:hover {
+  color:#9627d6; 
+  text-decoration:none; 
+  cursor:pointer;  
+}
+.adduser{ 
+  color: #fff;
+  display:block;
+  margin: 40px;
+  padding: 25px 20px;
+}
+input[type=name]{
+  margin-left: 62px;
+  height: auto;
+  width: 25%;
+  border-radius: 9px;
+  border-color: #fff;
+  background-color: rgba(212, 199, 199, 0.76);
+}
+input[type=number]{
+  margin-left: 38px;
+  width: 25%;
+  border-radius: 9px;
+  background-color: rgba(212, 199, 199, 0.76);
+}
+input[type=date]{
+  margin-left: 80px;
+  width: 25%;
+  border-radius: 9px;
+  background-color: rgba(212, 199, 199, 0.76);
+}
+input[type=email]{
+  margin-left: 50px;
+  width: 25%;
+  border-radius: 9px;
+  background-color: rgba(212, 199, 199, 0.76);
+}
+input[type=text]{
+      margin-left: 33px;
+      width: 25%;
+      border-radius: 9px;
+      background-color: rgba(212, 199, 199, 0.76);
+    }
+input[type=password]{
+      margin-left: 35px;
+      width: 25%;
+      border-radius: 9px;
+      background-color: rgba(212, 199, 199, 0.76);
+    }
+input[type=submit]{
+  background-color: #9627d6;
+  border-radius: 9px;
+  color: white;
+  padding: 6px 15px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
