@@ -87,7 +87,7 @@ else{
 // $name = $_POST['name'];
 $email = $_POST['email'];
 $password = $_POST['password'];
-$location = $_POST['location'];
+$location = $_POST['location];
 $number = $_POST['number'];
 $id =$_SESSION['id'];
 $insQuery = mysqli_query($con, "INSERT INTO clinic(name,email,password,location,number) VALUES('$name','$email','$password','$location','$number')");
